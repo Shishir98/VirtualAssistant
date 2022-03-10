@@ -29,7 +29,7 @@ engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
 
-
+trigger_word = ("patricia")
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
@@ -46,9 +46,8 @@ def wishMe():
     else:
         speak("Good Evening Sir !")
 
-    assname = ("Patricia")
     speak("I am your Assistant")
-    speak(assname)
+    speak(trigger_word)
 
 
 # def username():
@@ -105,7 +104,7 @@ if __name__ == '__main__':
         # stored here in 'query' and will be
         # converted to lower case for easily
         # recognition of command
-        if 'patricia' in query:
+        if trigger_word in query:
             print("Something works")
             if 'wikipedia' in query:
                 speak('Searching Wikipedia...')
