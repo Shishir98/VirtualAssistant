@@ -67,13 +67,13 @@ if __name__ == '__main__':
             elif 'play music' in query or "play song" in query:
                 speak("Here you go with music")
                 # music_dir = "G:\\Song"
-                music_dir = "C:\\Users\\GAURAV\\Music"
+                music_dir = "xyz"
                 songs = os.listdir(music_dir)
                 print(songs)
                 random = os.startfile(os.path.join(music_dir, songs[1]))
 
             elif 'the time' in query:
-                strTime = datetime.datetime.now().strftime("% H:% M:% S")
+                strTime = datetime.datetime.now().strftime("%H:%M:%S")
                 speak(f"Sir, the time is {strTime}")
 
             elif 'open opera' in query:
@@ -154,12 +154,9 @@ if __name__ == '__main__':
             elif "who i am" in query:
                 speak("If you talk then definitely your human.")
 
-            elif "why you came to world" in query:
-                speak("Thanks to Gaurav. further It's a secret")
-
             elif 'power point presentation' in query:
                 speak("opening Power Point presentation")
-                power = r"C:\\Users\\GAURAV\\Desktop\\Minor Project\\Presentation\\Voice Assistant.pptx"
+                power = r"xyz"
                 os.startfile(power)
 
             elif 'is love' in query:
@@ -179,7 +176,7 @@ if __name__ == '__main__':
                 speak("Background changed successfully")
 
             elif 'open bluestack' in query:
-                appli = r"C:\\ProgramData\\BlueStacks\\Client\\Bluestacks.exe"
+                appli = r"xyz"
                 os.startfile(appli)
 
             elif 'news' in query:
